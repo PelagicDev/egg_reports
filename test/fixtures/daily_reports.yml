@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hatch: 1
+  cull: 1
+  double: 1
+  hen_deaths: 1
+  male_deaths: 1
+  hen_feed: 9.99
+  male_feed: 9.99
+  house_id: 
+  house_id: 1
+
+two:
+  hatch: 1
+  cull: 1
+  double: 1
+  hen_deaths: 1
+  male_deaths: 1
+  hen_feed: 9.99
+  male_feed: 9.99
+  house_id: 
+  house_id: 1
