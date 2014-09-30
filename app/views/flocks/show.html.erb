@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Hens:</strong>
+  <%= @flock.hens %>
+</p>
+
+<p>
+  <strong>Males:</strong>
+  <%= @flock.males %>
+</p>
+
+<p>
+  <strong>Hen feed:</strong>
+  <%= @flock.hen_feed %>
+</p>
+
+<p>
+  <strong>Male feed:</strong>
+  <%= @flock.male_feed %>
+</p>
+
+<p>
+  <strong>Water meter:</strong>
+  <%= @flock.water_meter %>
+</p>
+
+<p>
+  <strong>Open date:</strong>
+  <%= @flock.open_date %>
+</p>
+
+<p>
+  <strong>Close date:</strong>
+  <%= @flock.close_date %>
+</p>
+
+<p>
+  <strong>House:</strong>
+  <%= @flock.house_id %>
+</p>
+
+<%= link_to 'Edit', edit_flock_path(@flock) %> |
+<%= link_to 'Back', flocks_path %>

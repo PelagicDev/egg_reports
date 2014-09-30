@@ -3,21 +3,19 @@
 one:
   hens: 1
   males: 1
-  hen_feed: 1
-  male_feed: 1
+  hen_feed: 9.99
+  male_feed: 9.99
   water_meter: 9.99
-  open_date: 2014-09-25
-  close_date: 2014-09-25
-  house_id: 
+  open_date: 2014-09-26
+  close_date: 2014-09-26
   house_id: 1
 
 two:
   hens: 1
   males: 1
-  hen_feed: 1
-  male_feed: 1
+  hen_feed: 9.99
+  male_feed: 9.99
   water_meter: 9.99
-  open_date: 2014-09-25
-  close_date: 2014-09-25
-  house_id: 
+  open_date: 2014-09-26
+  close_date: 2014-09-26
   house_id: 1

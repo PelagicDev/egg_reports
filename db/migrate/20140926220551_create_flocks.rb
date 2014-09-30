@@ -3,12 +3,11 @@ class CreateFlocks < ActiveRecord::Migration
     create_table :flocks do |t|
       t.integer :hens
       t.integer :males
-      t.integer :hen_feed
-      t.integer :male_feed
+      t.decimal :hen_feed
+      t.decimal :male_feed
       t.decimal :water_meter
       t.date :open_date
       t.date :close_date
-      t.references :house, index: true
       t.integer :house_id
 
       t.timestamps

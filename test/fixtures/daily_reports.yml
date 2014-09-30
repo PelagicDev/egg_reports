@@ -8,7 +8,6 @@ one:
   male_deaths: 1
   hen_feed: 9.99
   male_feed: 9.99
-  house_id: 
   house_id: 1
 
 two:
@@ -19,5 +18,4 @@ two:
   male_deaths: 1
   hen_feed: 9.99
   male_feed: 9.99
-  house_id: 
   house_id: 1

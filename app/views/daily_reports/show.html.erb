@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Hatch:</strong>
+  <%= @daily_report.hatch %>
+</p>
+
+<p>
+  <strong>Cull:</strong>
+  <%= @daily_report.cull %>
+</p>
+
+<p>
+  <strong>Double:</strong>
+  <%= @daily_report.double %>
+</p>
+
+<p>
+  <strong>Hen deaths:</strong>
+  <%= @daily_report.hen_deaths %>
+</p>
+
+<p>
+  <strong>Male deaths:</strong>
+  <%= @daily_report.male_deaths %>
+</p>
+
+<p>
+  <strong>Hen feed:</strong>
+  <%= @daily_report.hen_feed %>
+</p>
+
+<p>
+  <strong>Male feed:</strong>
+  <%= @daily_report.male_feed %>
+</p>
+
+<p>
+  <strong>House:</strong>
+  <%= @daily_report.house_id %>
+</p>
+
+<%= link_to 'Edit', edit_daily_report_path(@daily_report) %> |
+<%= link_to 'Back', daily_reports_path %>
