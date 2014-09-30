@@ -17,8 +17,8 @@
   <tbody>
     <% @daily_reports.each do |daily_report| %>
       <tr>
-        <td><%= daily_report.hatch %></td>
-        <td><%= daily_report.cull %></td>
+        <td><%= daily_report.hatch_eggs %></td>
+        <td><%= daily_report.cull_eggs %></td>
         <td><%= daily_report.hen_deaths %></td>
         <td><%= daily_report.male_deaths %></td>
         <td><%= daily_report.hen_feed %></td>
@@ -34,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Daily report', new_daily_report_path %>
+<%= link_to 'New Daily report', new_daily_report_path, class: 'btn btn-primary btn-lg' %>
