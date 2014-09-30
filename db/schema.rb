@@ -17,9 +17,8 @@ ActiveRecord::Schema.define(version: 20140926220551) do
   enable_extension "plpgsql"
 
   create_table "daily_reports", force: true do |t|
-    t.integer  "hatch"
-    t.integer  "cull"
-    t.integer  "double"
+    t.integer  "hatch_eggs"
+    t.integer  "cull_eggs"
     t.integer  "hen_deaths"
     t.integer  "male_deaths"
     t.decimal  "hen_feed"
