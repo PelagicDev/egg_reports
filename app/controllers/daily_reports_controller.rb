@@ -69,6 +69,6 @@ class DailyReportsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def daily_report_params
-      params.require(:daily_report).permit(:hatch, :cull, :double, :hen_deaths, :male_deaths, :hen_feed, :male_feed, :house_id)
+      params.require(:daily_report).permit(:hatch_eggs, :cull_eggs, :hen_deaths, :male_deaths, :hen_feed, :male_feed, :house_id)
     end
 end
