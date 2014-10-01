@@ -1,14 +1,21 @@
 <%= simple_form_for(@daily_report) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
+  <div class="form-group">
     <%= f.input :hatch_eggs %>
     <%= f.input :cull_eggs %>
+  </div>
+
+  <div class="form-group">
     <%= f.input :hen_deaths %>
     <%= f.input :male_deaths %>
     <%= f.input :hen_feed %>
     <%= f.input :male_feed %>
-    <%= f.input :house_id %>
+  </div>
+  <div class="form-group">
+    <div class="radio">
+      <%= f.association :house, as: :radio_buttons %>
+    </div>
   </div>
 
   <div class="form-actions">
