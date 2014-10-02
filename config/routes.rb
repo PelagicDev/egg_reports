@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  root 'houses#index'
+  root 'landings#home'
+
+  get 'landings/admin'
 
   resources :flocks
 
