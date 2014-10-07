@@ -9,6 +9,7 @@
   <strong>Farm name:</strong>
   <%= @house.farm_name %>
 </p>
-
+<%= link_to "View Daily Reports", house_daily_reports_path(@house) %>
+<%= link_to 'New Daily Report', new_house_daily_report_path(@house), class: 'btn btn-primary btn-large' %>
 <%= link_to 'Edit', edit_house_path(@house) %> |
 <%= link_to 'Back', houses_path %>
