@@ -25,7 +25,7 @@
         <td><%= daily_report.male_feed %></td>
         <td><%= daily_report.house_id %></td>
         <td><%= link_to 'Show', [@house, daily_report] %></td>
-        <td><%= link_to 'Edit', edit_house_daily_report(@house, daily_report) %></td>
+        <td><%= link_to 'Edit', edit_house_daily_report_path(@house, daily_report) %></td>
         <td><%= link_to 'Delete', [@house, daily_report], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

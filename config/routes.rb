@@ -7,7 +7,7 @@ devise_for :users, controllers: {registrations: "users/registrations", sessions:
 
   resources :flocks
 
-  resources :houses, shallow: true do
+  resources :houses do
     resources :daily_reports
   end
 
