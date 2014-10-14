@@ -26,9 +26,9 @@
         <td><%= flock.open_date %></td>
         <td><%= flock.close_date %></td>
         <td><%= flock.house_id %></td>
-        <td><%= link_to 'Show', flock %></td>
-        <td><%= link_to 'Edit', edit_flock_path(flock) %></td>
-        <td><%= link_to 'Destroy', flock, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', [@house, flock] %></td>
+        <td><%= link_to 'Edit', edit_house_flock_path(@house, flock) %></td>
+        <td><%= link_to 'Delete', [@house, flock], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,4 +36,4 @@
 
 <br>
 
-<%= link_to 'New Flock', new_flock_path %>
+<%= link_to 'New Flock', new_house_flock_path(@house), class: 'btn btn-primary btn-lg' %>

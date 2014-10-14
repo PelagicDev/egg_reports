@@ -1,4 +1,4 @@
-<%= simple_form_for(@flock) do |f| %>
+<%= simple_form_for([@house, @flock]) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
@@ -9,7 +9,6 @@
     <%= f.input :water_meter %>
     <%= f.input :open_date %>
     <%= f.input :close_date %>
-    <%= f.input :house_id %>
   </div>
 
   <div class="form-actions">

@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @flock %> |
-<%= link_to 'Back', flocks_path %>
+<%= link_to 'Show', house_flock_path(@house, @flock) %> |
+<%= link_to 'Back', house_flocks_path(@house) %>

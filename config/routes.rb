@@ -5,9 +5,8 @@ devise_for :users, controllers: {registrations: "users/registrations", sessions:
 
   get 'landings/admin'
 
-  resources :flocks
-
   resources :houses do
+    resources :flocks
     resources :daily_reports
   end
 

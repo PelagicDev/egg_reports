@@ -1,15 +1,16 @@
 class FlocksController < ApplicationController
-  before_action :set_flock, only: [:show, :edit, :update, :destroy]
+before_filter :get_house
 
   # GET /flocks
   # GET /flocks.json
   def index
-    @flocks = Flock.all
+    @flocks = @house.flocks.all
   end
 
   # GET /flocks/1
   # GET /flocks/1.json
   def show
+    @flock = @house.flocks.find(params[:id])
   end
 
   # GET /flocks/new
@@ -19,17 +20,18 @@ class FlocksController < ApplicationController
 
   # GET /flocks/1/edit
   def edit
+    @flock = @house.flocks.find(params[:id])
   end
 
   # POST /flocks
   # POST /flocks.json
   def create
-    @flock = Flock.new(flock_params)
+    @flock = @house.flocks.new(flock_params)
 
     respond_to do |format|
       if @flock.save
-        format.html { redirect_to @flock, notice: 'Flock was successfully created.' }
-        format.json { render :show, status: :created, location: @flock }
+        format.html { redirect_to [@house, @flock], notice: 'Flock was successfully created.' }
+        format.json { render :show, status: :created, location: [@house, @flock] }
       else
         format.html { render :new }
         format.json { render json: @flock.errors, status: :unprocessable_entity }
@@ -63,8 +65,8 @@ class FlocksController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_flock
-      @flock = Flock.find(params[:id])
+    def get_house
+      @house = House.find(params[:house_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
