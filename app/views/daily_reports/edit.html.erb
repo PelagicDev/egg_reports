@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @daily_report %> |
-<%= link_to 'Back', daily_reports_path %>
+<%= link_to 'Show', house_daily_report_path(@house, @daily_report) %> |
+<%= link_to 'Back', house_daily_reports_path(@house) %>

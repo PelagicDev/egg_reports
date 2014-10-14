@@ -19,6 +19,7 @@ class HousesController < ApplicationController
 
   # GET /houses/1/edit
   def edit
+
   end
 
   # POST /houses

@@ -5,7 +5,7 @@ class DailyReportsController < ApplicationController
   # GET houses/1/daily_reports
   # GET /daily_reports.json
   def index
-    @daily_reports = @house.daily_reports
+    @daily_reports = @house.daily_reports.all
   end
 
   # GET /daily_reports/1
@@ -21,6 +21,7 @@ class DailyReportsController < ApplicationController
 
   # GET /daily_reports/1/edit
   def edit
+    @daily_report = @house.daily_reports.find(params[:id])
   end
 
   # POST /daily_reports
@@ -68,10 +69,6 @@ class DailyReportsController < ApplicationController
     def get_house
       @house = House.find(params[:house_id])
     end
-
-    # def set_daily_report
-    #   @daily_report = DailyReport.find(params[:id])
-    # end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def daily_report_params
