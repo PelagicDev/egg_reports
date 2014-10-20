@@ -6,6 +6,9 @@ class DailyReportsController < ApplicationController
   # GET /daily_reports.json
   def index
     @daily_reports = @house.daily_reports.all
+
+    @weekly_hatch = @house.daily_reports.by_week.calculate(:sum, :hatch_eggs)
+    @weekly_cull = @house.daily_reports.by_week.calculate(:sum, :cull_eggs)
   end
 
   # GET /daily_reports/1
