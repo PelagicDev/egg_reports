@@ -1,8 +1,12 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
-    <h1>Daily Egg Production Report</h1>
-
+    <h3>Egg Production Report</h3>
+      <% @houses.each do |house| %>
+      <div class="col-xs-6 house-btn">
+        <%= link_to house.name, house, class: 'btn btn-primary btn-block' %>
+      </div>
+      <% end %>
     </div>
   </div>
 </div>

@@ -1,19 +1,33 @@
-<%= simple_form_for([@house, @daily_report]) do |f| %>
+<div class="container">
+<%= simple_form_for([@house, @daily_report], html: { class: 'form-horizontal' }) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-group">
-    <%= f.input :hatch_eggs %>
-    <%= f.input :cull_eggs %>
+    <label for="hatch_eggs" class="sr-only">Hatch:</label>
+    <%= f.input :hatch_eggs, input_html: { class: 'form-control' }, label: false, placeholder: 'Hatch Eggs', as: :tel %>
   </div>
 
   <div class="form-group">
-    <%= f.input :hen_deaths %>
-    <%= f.input :male_deaths %>
-    <%= f.input :hen_feed %>
-    <%= f.input :male_feed %>
+    <label for="cull_eggs" class="sr-only">Cull:</label>
+    <%= f.input :cull_eggs, input_html: { class: 'form-control' }, label: false, placeholder: 'Cull Eggs', as: :tel %>
+  </div>
+
+  <div class="form-group">
+    <%= f.input :hen_deaths, input_html: { class: 'form-control' }, label: false, placeholder: 'Total Hen Deaths', as: :tel %>
+  </div>
+  <div class="form-group">
+    <%= f.input :male_deaths, input_html: { class: 'form-control' }, label: false, placeholder: 'Total Male Deaths', as: :tel %>
+  </div>
+  <div class="form-group">
+    <%= f.input :hen_feed, input_html: { class: 'form-control' }, label: false, placeholder: 'Total Hen Feed', as: :integer %>
+  </div>
+  <div class="form-group">
+    <%= f.input :male_feed, input_html: { class: 'form-control' }, label: false, placeholder: 'Total Male Feed', as: :integer %>
+    <p class="help-block">100/lbs</p>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, class: 'btn btn-success btn-block' %>
   </div>
 <% end %>
+</div>

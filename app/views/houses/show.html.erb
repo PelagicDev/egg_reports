@@ -1,15 +1,29 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @house.name %>
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6">
+      <h4 class="text-center"><%= @house.name %></h4>
+    </div>
+    <div class="col-xs-6">
+      <h4 class="text-center"><%= @house.farm_name %></h4>
+    </div>
+  </div>
 
-<p>
-  <strong>Farm name:</strong>
-  <%= @house.farm_name %>
-</p>
-<%= link_to "View Daily Reports", house_daily_reports_path(@house) %>
-<%= link_to 'New Daily Report', new_house_daily_report_path(@house), class: 'btn btn-primary btn-large' %>
-<%= link_to 'Edit', edit_house_path(@house) %> |
-<%= link_to 'Back', houses_path %>
+  <div class="row">
+    <div class="col-sm-12">
+      <%= link_to 'New Daily Report', new_house_daily_report_path(@house), class: 'btn btn-success btn-block' %>
+    </div>
+  </div>
+
+  <br><br>
+  <div class="row">
+    <div class="col-sm-12">
+      <%= link_to 'Choose New House', root_path, class: 'btn btn-default btn-block' %>
+
+      <br>
+      <%= link_to 'Edit', edit_house_path(@house), class: 'btn btn-warning btn-block' %>
+      <%= link_to "View Daily Reports", house_daily_reports_path(@house), class: 'btn btn-warning btn-block' %>
+    </div>
+  </div>
+</div>
