@@ -39,6 +39,7 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'bundler'
+gem 'by_star', :git => "git://github.com/radar/by_star"
 
 group :development do
   gem 'better_errors'

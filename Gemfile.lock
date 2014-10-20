@@ -10,6 +10,13 @@ GIT
       warden (~> 1.2.3)
 
 GIT
+  remote: git://github.com/radar/by_star
+  revision: d972c500b235196e6c512ce24440bd5857839bf5
+  specs:
+    by_star (2.2.1)
+      activesupport
+
+GIT
   remote: git://github.com/twbs/bootstrap-sass.git
   revision: c9f2e89f826db06e058ac2a97da4dd7fd6b10ccc
   specs:
@@ -175,6 +182,7 @@ DEPENDENCIES
   bootstrap-sass!
   bootstrap-sass-extras
   bundler
+  by_star!
   coffee-rails (~> 4.0.0)
   devise!
   google-analytics-rails
