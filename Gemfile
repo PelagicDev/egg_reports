@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+source 'https://rails-assets.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -40,6 +41,8 @@ gem 'spring',        group: :development
 
 gem 'bundler'
 gem 'by_star', :git => "git://github.com/radar/by_star"
+
+gem 'rails-assets-scotch-panels'
 
 group :development do
   gem 'better_errors'
